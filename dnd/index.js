@@ -7,12 +7,15 @@ var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
     }
     return to.concat(ar || Array.prototype.slice.call(from));
 };
-var roll = function () { return Math.floor(Math.random() * 6); };
+var roll = function () { return Math.floor(Math.random() * 7); };
 var dices = function (n) { return __spreadArray([], Array(n), true).map(roll); };
 var score = function (rolls, top) {
     if (rolls === void 0) { rolls = 4; }
     if (top === void 0) { top = 3; }
-    return dices(rolls).sort(function (a, b) { return a - b; }).slice(0, top + 1).reduce(function (a, b) { return a + b; });
+    return dices(rolls)
+        .sort(function (a, b) { return b - a; })
+        .slice(0, top)
+        .reduce(function (a, b) { return a + b; });
 };
 var generate = function () {
     return {
