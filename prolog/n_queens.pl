@@ -35,7 +35,8 @@ show(Queens) :-
   show(Queens, 0).
 show([], _).
 show([Queen | Queens], Row) :-
-  indent(Queen, Row + 1), writef("Q%t", [Queen]), nl, nl,
+  indent(Queen, Row + 1), writef("Q%t", [Queen]),
+  nl, nl, nl,
   show(Queens, Row + 1).
 
 queens(N, Queens) :-
