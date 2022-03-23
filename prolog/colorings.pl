@@ -14,6 +14,7 @@ colorings(Colors, Countries, Borders) :-
   borders(Borders),
   colorize(Countries, Colors).
 
+% example/validation
 colorings(
   ['r', 'g', 'y', 'b'],
   [Chile, Argentina, Bolivia, Uruguay, Paraguay, Peru],
